@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Bilal | MERN Stack Developer</title>
+    <meta
+      name="description"
+      content="Muhammad Bilal, MERN stack developer. Modern, responsive and scalable web applications."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="font-sans antialiased">
+    <div id="progress"></div>
+
+    <!-- NAVBAR: floating dock on tablet/laptop, menu button on mobile -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 px-4 py-2.5 flex items-center justify-between pointer-events-none"
+    >
+      <a
+        href="#home"
+        class="pointer-events-auto glass rounded-full pl-1 pr-3 py-1 flex items-center gap-2 font-display font-bold text-[12px]"
+      >
+        <span class="logo-badge">MB</span
+        ><span class="hidden lg:inline">Muhammad Bilal</span>
+      </a>
+      <nav class="dock hidden sm:block" aria-label="Main">
+        <div class="dock-tray" id="dock-tray"></div>
+      </nav>
+      <a
+        href="#contact"
+        class="pointer-events-auto hidden lg:inline-block btn-solid !text-[11px] !py-1.5 !px-4"
+        >Hire me</a
+      >
+      <button
+        id="menu-btn"
+        class="pointer-events-auto sm:hidden glass w-9 h-9 rounded-full text-sm"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <div id="mobile-menu" class="hidden sm:hidden fixed top-14 inset-x-4 z-40">
+      <div class="dock-tray m-grid" id="m-grid"></div>
+    </div>
+
+    <!-- HOME -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden text-center"
+    >
+      <div class="grid-bg absolute inset-0"></div>
+      <div class="orb w-72 h-72 bg-violet-600 top-10 -left-16"></div>
+      <div
+        class="orb w-64 h-64 bg-pink-500 bottom-10 -right-10"
+        style="animation-delay: -8s"
+      ></div>
+      <span class="fchip" style="top: 24%; left: 14%; --d: 0s"
+        ><i class="fa-brands fa-react"></i
+      ></span>
+      <span class="fchip" style="top: 30%; right: 13%; --d: -2s"
+        ><i class="fa-brands fa-node-js"></i
+      ></span>
+      <span class="fchip" style="top: 62%; left: 10%; --d: -4s"
+        ><i class="fa-brands fa-js"></i
+      ></span>
+      <span class="fchip" style="top: 66%; right: 11%; --d: -1s"
+        ><i class="fa-solid fa-database"></i
+      ></span>
+      <span class="fchip" style="top: 16%; right: 32%; --d: -3s"
+        ><i class="fa-brands fa-python"></i
+      ></span>
+      <span class="fchip" style="top: 78%; left: 30%; --d: -5s"
+        ><i class="fa-brands fa-html5"></i
+      ></span>
+      <div class="relative z-10 px-6 pt-16 max-w-3xl mx-auto">
+        <p
+          class="rise inline-flex items-center gap-2 text-[11px] rounded-full border border-[#2a2350] bg-[#14112b]/80 px-3 py-1.5 mb-6"
+        >
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span
+          >Open to freelance and full-time roles
+        </p>
+        <h1
+          id="hero-name"
+          class="font-display font-extrabold text-3xl sm:text-5xl leading-[1.08] tracking-tight"
+          aria-label="Muhammad Bilal"
+        >
+          Muhammad Bilal
+        </h1>
+        <p
+          class="rise mt-3 font-display text-base sm:text-xl grad font-bold min-h-[2rem]"
+          style="animation-delay: 0.9s"
+        >
+          <span id="typed" class="caret pr-1"></span>
+        </p>
+        <p
+          class="rise mt-4 text-gray-400 max-w-md mx-auto"
+          style="animation-delay: 1.05s"
+        >
+          I build modern, responsive and scalable web applications, from the
+          database to the last pixel.
+        </p>
+        <div
+          class="rise mt-7 flex flex-wrap justify-center gap-3"
+          style="animation-delay: 1.2s"
+        >
+          <a href="#work" class="btn-solid mag">View my projects</a>
+          <a
+            href="assets/Bilal_CV.pdf"
+            download="M_Bilal_CV.pdf"
+            class="btn-line mag"
+            ><i class="fa-solid fa-download mr-2"></i>Download CV</a
+          >
+        </div>
+        <div
+          class="rise mt-7 flex justify-center gap-5 text-lg text-gray-400"
+          style="animation-delay: 1.35s"
+        >
+          <a
+            aria-label="GitHub"
+            class="hover:text-white hover:-translate-y-1 transition"
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/M-Bilal-15302"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            aria-label="LinkedIn"
+            class="hover:text-white hover:-translate-y-1 transition"
+            target="_blank"
+            rel="noopener"
+            href="https://www.linkedin.com/in/bilal-khattak-5aa319297/"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            aria-label="Email"
+            class="hover:text-white hover:-translate-y-1 transition"
+            href="#contact"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+      <a
+        href="#work"
+        aria-label="Scroll down"
+        class="absolute bottom-7 text-gray-500 animate-bounce"
+        ><i class="fa-solid fa-chevron-down"></i
+      ></a>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="work" class="relative py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="reveal mb-9">
+          <h2 class="sec-title">Selected projects</h2>
+          <p class="text-gray-400 mt-2 max-w-md">
+            Things I've built. Open the live version or read the code.
+          </p>
+        </div>
+        <div id="projects" class="grid gap-6"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="relative py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="reveal sec-title mb-8">About me</h2>
+        <div class="grid lg:grid-cols-5 gap-8 items-start">
+          <div
+            class="lg:col-span-3 space-y-4 text-gray-400 leading-relaxed reveal"
+          >
+            <p>
+              I'm a Computer Science graduate from
+              <b class="text-white">Abdul Wali Khan University Mardan</b> (BS
+              Computer Science, 2021 to 2025, final grade 3.73 / 4). My degree
+              covered data structures and algorithms, networks and operating
+              systems, software engineering, web technologies, artificial
+              intelligence, machine learning and mathematics.
+            </p>
+            <p>
+              I work across the stack with Python, JavaScript, React, Node.js
+              and SQL, and I enjoy data analytics with Pandas and NumPy. My
+              final year project, <b class="text-white">Smart Queue Manager</b>,
+              is a mobile system where people book queue tokens remotely and get
+              real-time updates, with an admin panel for staff. I also built
+              Movie Explorer, a React app that fetches live movie data through
+              asynchronous API requests.
+            </p>
+            <p>
+              I co-authored a
+              <b class="text-white">Springer Nature book chapter</b> on
+              AI-driven vehicular ad-hoc networks (VANETs) for smart-city
+              traffic management and sustainability. I hold certifications in
+              Google Data Analytics, AI for Everyone, Python, Microsoft Excel
+              and Front-End Development. Next, I'm looking for higher studies in
+              AI, machine learning and IoT, and for roles where I can build
+              reliable, data-driven software.
+            </p>
+          </div>
+          <div
+            class="card p-6 lg:col-span-2 reveal"
+            style="transition-delay: 0.1s"
+          >
+            <div class="flex items-center gap-4 mb-5">
+              <p class="font-display font-extrabold text-4xl grad">
+                <span data-count="1">0</span>+
+              </p>
+              <div>
+                <p class="font-semibold">Years of experience</p>
+                <p class="text-xs text-gray-400">Hands-on work in real teams</p>
+              </div>
+            </div>
+            <ol class="relative border-l border-[#2a2350] ml-2 pl-6 space-y-6">
+              <li class="relative">
+                <span class="dot"></span>
+                <p class="font-medium">Web Development Intern</p>
+                <p class="text-xs text-violet-300">
+                  OREL Vision · Nov 2025 to May 2026
+                </p>
+                <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+                  Selected for the Pakistan Software Export Board (PSEB)
+                  placement programme at OREL Vision. Worked on web development
+                  tasks as part of a professional software team.
+                </p>
+              </li>
+              <li class="relative">
+                <span class="dot"></span>
+                <p class="font-medium">Junior Web developer Intern</p>
+                <p class="text-xs text-violet-300">
+                  JAFASA Tech · Mar 2023 to Apr 2024
+                </p>
+                <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+                  Customised front-end templates with HTML, CSS and JavaScript
+                  for client dashboards. Helped with backend integration using
+                  basic PHP and SQL, and kept project records organised.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="stack" class="relative py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="reveal sec-title mb-9">Skills and tools</h2>
+        <div
+          id="stack-grid"
+          class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        ></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="relative py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="reveal sec-title mb-9">How I can help</h2>
+        <div
+          id="services-grid"
+          class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        ></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="card p-7 md:p-10 reveal">
+          <div class="text-center max-w-xl mx-auto mb-9">
+            <h2 class="sec-title">Let's build something together</h2>
+            <p class="text-gray-400 mt-3">
+              Tell me about your project or role. I usually reply within a day.
+            </p>
+          </div>
+          <div class="grid lg:grid-cols-5 gap-8">
+            <div class="lg:col-span-2 space-y-3 text-[12px]">
+              <a
+                class="link-row"
+                target="_blank"
+                rel="noopener"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=iambilal.co@gmail.com"
+                ><i class="fa-regular fa-envelope"></i>iambilal.co@gmail.com</a
+              >
+              <a
+                class="link-row"
+                target="_blank"
+                rel="noopener"
+                href="https://www.linkedin.com/in/bilal-khattak-5aa319297/"
+                ><i class="fa-brands fa-linkedin-in"></i>LinkedIn profile</a
+              >
+              <a
+                class="link-row"
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/M-Bilal-15302"
+                ><i class="fa-brands fa-github"></i>github.com/M-Bilal-15302</a
+              >
+            </div>
+            <form id="contact-form" class="lg:col-span-3 space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <input
+                  id="name"
+                  required
+                  placeholder="Your name"
+                  class="inp"
+                  aria-label="Your name"
+                />
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="Email address"
+                  class="inp"
+                  aria-label="Email address"
+                />
+              </div>
+              <input
+                id="subject"
+                required
+                placeholder="Subject"
+                class="inp"
+                aria-label="Subject"
+              />
+              <textarea
+                id="message"
+                rows="4"
+                required
+                placeholder="Your message"
+                class="inp resize-none"
+                aria-label="Message"
+              ></textarea>
+              <button class="btn-solid mag">Send message</button>
+              <p
+                id="form-status"
+                class="text-sm text-emerald-400"
+                role="status"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative overflow-hidden border-t border-[#2a2350] mt-10">
+      <div
+        class="max-w-5xl mx-auto px-6 pt-14 pb-6 grid gap-8 md:grid-cols-3 items-start relative z-10"
+      >
+        <div class="space-y-3">
+          <a
+            href="#home"
+            class="inline-flex items-center gap-2 font-display font-bold text-[12px]"
+            ><span class="logo-badge">MB</span>Muhammad Bilal</a
+          >
+          <p class="text-gray-400 text-[12px] max-w-xs leading-relaxed">
+            MERN stack developer building fast, accessible and scalable web
+            applications.
+          </p>
+          <p class="inline-flex items-center gap-2 text-[10px] text-gray-300">
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
+            ></span
+            >Available for new projects
+          </p>
+        </div>
+        <div class="md:text-center text-[12px]">
+          <h4 class="foot-h">Explore</h4>
+          <ul id="foot-links" class="space-y-2.5"></ul>
+        </div>
+        <div class="md:text-right text-[12px]">
+          <h4 class="foot-h">Connect</h4>
+          <div class="flex gap-3 mb-3 md:justify-end">
+            <a
+              aria-label="GitHub"
+              class="soc"
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/M-Bilal-15302"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              aria-label="LinkedIn"
+              class="soc"
+              target="_blank"
+              rel="noopener"
+              href="https://www.linkedin.com/in/bilal-khattak-5aa319297/"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              aria-label="Email"
+              class="soc"
+              href="mailto:iambilal.co@gmail.com"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+          </div>
+          <a
+            href="mailto:iambilal.co@gmail.com"
+            class="block mb-4 text-gray-400 hover:text-white transition"
+            >iambilal.co@gmail.com</a
+          >
+          <a href="#home" class="btn-line inline-block"
+            >Back to top <i class="fa-solid fa-arrow-up ml-2 text-[10px]"></i
+          ></a>
+        </div>
+      </div>
+      <div class="foot-mark" aria-hidden="true">BILAL</div>
+      <div
+        class="relative z-10 max-w-5xl mx-auto px-6 pb-7 pt-4 border-t border-[#2a2350]/60 flex flex-wrap justify-between gap-2 text-[10px] text-gray-500"
+      >
+        <span>&copy; 2026 Muhammad Bilal. All rights reserved.</span
+        ><span>Designed and coded by Muhammad Bilal</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
